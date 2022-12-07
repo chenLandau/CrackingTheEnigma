@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox prefHeight="200.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Agent.AgentUI.component.ContestScreen.ContestAndTeamDataArea.ContestDataArea.ContestDataAreaController">
+   <children>
+      <VBox prefHeight="200.0" prefWidth="300.0">
+         <children>
+            <Label prefHeight="50.0" prefWidth="300.0" styleClass="contestDataLabel" text="Battle field name:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font></Label>
+            <Label prefHeight="50.0" prefWidth="300.0" styleClass="contestDataLabel" text="Uboat user name:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font></Label>
+            <Label prefHeight="50.0" prefWidth="300.0" styleClass="contestDataLabel" text="Game Status:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font></Label>
+            <Label prefHeight="50.0" prefWidth="300.0" styleClass="contestDataLabel" text="Game level:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font></Label>
+            <Label prefHeight="50.0" prefWidth="300.0" styleClass="contestDataLabel" text="Active teams: " textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font></Label>
+         </children>
+      </VBox>
+      <VBox prefHeight="200.0" prefWidth="300.0">
+         <children>
+            <Label fx:id="battleFieldNameLabel" prefHeight="50.0" prefWidth="300.0" styleClass="contestDataLabel" />
+            <Label fx:id="uboatUsernameLabel" prefHeight="50.0" prefWidth="300.0" styleClass="contestDataLabel" />
+            <Label fx:id="gameStatusLabel" prefHeight="50.0" prefWidth="300.0" styleClass="contestDataLabel" />
+            <Label fx:id="gameLevelLabel" prefHeight="50.0" prefWidth="300.0" styleClass="contestDataLabel" />
+            <Label fx:id="activeTeamLabel" prefHeight="50.0" prefWidth="300.0" styleClass="contestDataLabel" />
+         </children>
+      </VBox>
+   </children>
+</HBox>

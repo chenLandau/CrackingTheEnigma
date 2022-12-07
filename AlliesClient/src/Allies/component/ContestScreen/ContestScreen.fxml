@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1427.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Allies.component.ContestScreen.ContestScreenController">
+   <top>
+      <BorderPane prefHeight="233.0" prefWidth="1200.0" BorderPane.alignment="CENTER">
+         <left>
+            <fx:include fx:id="selectedContestDataComponent" source="SelectedContestDataArea/SelectedContestDataArea.fxml" />
+         </left>
+         <right>
+            <fx:include fx:id="alliesTeamsListDataComponent" source="AlliesTeamsDataArea/AlliesTeamsData.fxml" />
+         </right>
+         <top>
+            <VBox fx:id="contestOverVbox" alignment="CENTER" prefHeight="95.0" prefWidth="1427.0" visible="false" BorderPane.alignment="CENTER">
+               <children>
+                  <Label id="bigLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="53.0" prefWidth="1419.0" text="Contest is over!!! Press ok to start a new contest">
+                     <font>
+                        <Font name="System Bold Italic" size="36.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="okButton" mnemonicParsing="false" onAction="#okButtonClicked" prefHeight="77.0" prefWidth="114.0" text="OK" />
+               </children>
+            </VBox>
+         </top>
+      </BorderPane>
+   </top>
+   <right>
+      <fx:include fx:id="candidatesScrollPaneComponent" source="CandidatesArea/CandidatesData.fxml" />
+   </right>
+   <left>
+      <fx:include fx:id="agentsProgressAnchorPaneComponent" source="AgentsProgressData/AgentsProgressData.fxml" />
+   </left>
+</BorderPane>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<GridPane prefHeight="700.0" prefWidth="1400.0" styleClass="root" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Uboat.component.ContestScreen.ContestScreenController">
+   <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="842.0" minWidth="10.0" prefWidth="793.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="965.0" minWidth="10.0" prefWidth="607.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints maxHeight="515.0" minHeight="10.0" prefHeight="299.6666564941406" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="368.0" minHeight="10.0" prefHeight="132.66668701171875" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="318.0" minHeight="10.0" prefHeight="275.33331298828125" vgrow="SOMETIMES" />
+   </rowConstraints>
+   <children>
+      <VBox prefHeight="287.0" prefWidth="837.0" spacing="10.0">
+         <children>
+            <Label id="smallTitle" alignment="CENTER" prefHeight="56.0" prefWidth="837.0" text="Current machine configuration" textFill="#bfbebe">
+               <font>
+                  <Font name="System Bold Italic" size="32.0" />
+               </font>
+            </Label>
+            <StackPane fx:id="currentCodeConfigurationStackPane" prefHeight="83.0" prefWidth="793.0" />
+            <Label id="smallLabel" fx:id="codeCalibrationLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="46.0" prefWidth="1400.0" />
+            <HBox alignment="CENTER" prefHeight="45.0" prefWidth="788.0" spacing="10.0">
+               <children>
+                  <Label id="miniLabel" alignment="CENTER" prefHeight="44.0" prefWidth="141.0" text="Input string:" />
+                  <TextField fx:id="inputStringTextField" alignment="CENTER" prefHeight="40.0" prefWidth="458.0" />
+                  <Button fx:id="processButton" alignment="CENTER" disable="true" mnemonicParsing="false" onAction="#processButtonClicked" prefHeight="40.0" prefWidth="120.0" text="Process" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="45.0" prefWidth="837.0" spacing="10.0">
+               <children>
+                  <Label id="miniLabel" alignment="CENTER" prefHeight="45.0" prefWidth="166.0" text="Output string:" />
+                  <TextField fx:id="outputStringTextField" alignment="CENTER" editable="false" prefHeight="40.0" prefWidth="460.0" />
+                  <Button fx:id="readyButton" alignment="CENTER" disable="true" mnemonicParsing="false" onAction="#readyButtonClicked" prefHeight="40.0" prefWidth="120.0" text="Ready" />
+               </children>
+            </HBox>
+            <Label id="blackLabel" fx:id="errorMessageLabel" alignment="CENTER" prefHeight="22.0" prefWidth="788.0" textFill="#f51f1f" />
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" prefHeight="432.0" prefWidth="837.0" spacing="15.0" GridPane.rowIndex="1">
+         <padding>
+            <Insets top="10.0" />
+         </padding>
+         <children>
+            <VBox fx:id="tableViewVbox" prefHeight="216.0" prefWidth="649.0">
+               <children>
+                  <Label id="miniLabel" alignment="CENTER" prefHeight="30.0" prefWidth="794.0" text="Dictionaty words" />
+                  <ScrollPane prefHeight="146.0" prefWidth="732.0">
+                     <content>
+                        <VBox fx:id="dictionaryWordsVbox" alignment="CENTER" prefHeight="140.0" prefWidth="790.0" />
+                     </content>
+                  </ScrollPane>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+      <fx:include fx:id="candidatesScrollPaneComponent" source="CandidatesArea/CandidatesData.fxml" GridPane.rowIndex="2" />
+      <AnchorPane fx:id="winnerFoundAnchorPane" prefHeight="427.0" prefWidth="607.0" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.rowSpan="2">
+         <children>
+            <HBox layoutX="1.0" layoutY="331.0" prefHeight="74.0" prefWidth="599.0" spacing="10.0">
+               <children>
+                  <Button fx:id="resetMachineButton" mnemonicParsing="false" onAction="#resetMachineButtonClicked" prefHeight="60.0" prefWidth="196.0" text="Reset machine" />
+                  <Button fx:id="okButton" mnemonicParsing="false" onAction="#okButtonClicked" prefHeight="60.0" prefWidth="196.0" text="OK" />
+                  <Button fx:id="logOutButton" mnemonicParsing="false" onAction="#logOutButtonClicked" prefHeight="60.0" prefWidth="196.0" text="Logout" />
+               </children>
+            </HBox>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="607.0">
+               <children>
+                  <Label id="bigLabel" alignment="CENTER" prefHeight="39.0" prefWidth="599.0" text="Contest over!!!">
+                     <font>
+                        <Font size="27.0" />
+                     </font>
+                  </Label>
+                  <HBox fx:id="contestOverHBox" prefHeight="90.0" prefWidth="598.0">
+                     <children>
+                        <Label id="bigLabel" alignment="CENTER_RIGHT" prefHeight="39.0" prefWidth="555.0" text="The winner is: " />
+                        <Label id="bigLabel" fx:id="winnerNameLabel" alignment="CENTER" prefHeight="37.0" prefWidth="495.0" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <VBox prefHeight="287.0" prefWidth="607.0" GridPane.columnIndex="1">
+         <children>
+            <fx:include fx:id="alliesTeamsListDataComponent" source="AlliesTeamsDataArea/AlliesTeamsData.fxml" />
+         </children>
+      </VBox>
+   </children>
+</GridPane>

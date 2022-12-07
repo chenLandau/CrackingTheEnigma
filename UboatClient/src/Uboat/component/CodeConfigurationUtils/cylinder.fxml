@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="95.0" prefWidth="39.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Uboat.component.CodeConfigurationUtils.CylinderController">
+   <children>
+      <StackPane prefHeight="98.0" prefWidth="44.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d4d5d7" height="89.0" stroke="BLACK" strokeType="INSIDE" styleClass="rectangle" width="27.0" />
+            <Label id="miniLabel" fx:id="reflectorNumber" />
+         </children>
+      </StackPane>
+   </children>
+</VBox>

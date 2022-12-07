@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="770.0" styleClass="Screen" stylesheets="@CodeConfiguration.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Uboat.component.MachineScreen.subStages.InitializeCodeConfigurationManuallyController">
+    <content>
+        <GridPane prefHeight="480.0" prefWidth="770.0" styleClass="Screen" stylesheets="@CodeConfiguration.css">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.0" minWidth="10.0" prefWidth="200.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="422.0" minWidth="10.0" prefWidth="331.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="321.0" minWidth="10.0" prefWidth="276.0" />
+                <ColumnConstraints />
+                <ColumnConstraints />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="161.0" minHeight="10.0" prefHeight="161.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="279.6666564941406" minHeight="10.0" prefHeight="170.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="229.33334350585938" minHeight="10.0" prefHeight="48.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="229.33334350585938" minHeight="10.0" prefHeight="77.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <ScrollPane fx:id="hBoxScrollPane" fitToHeight="true" fitToWidth="true" prefHeight="178.0" prefWidth="514.0" GridPane.columnSpan="2" GridPane.rowIndex="1">
+                    <content>
+                        <HBox fx:id="codeConfigurationHBox" alignment="CENTER" prefHeight="176.0" prefWidth="651.0" styleClass="backGround" />
+                    </content>
+                </ScrollPane>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+               </children>
+            </VBox>
+                <ToolBar orientation="VERTICAL" prefHeight="161.0" prefWidth="204.0" styleClass="backGround" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                    <items>
+                        <Button fx:id="ChooseRotorsBtn" mnemonicParsing="false" onAction="#ClickMeChooseRotorsBtnListener" prefHeight="40.0" prefWidth="220.0" text="Add rotors" />
+                        <Button fx:id="ChooseFirstPositionBtn" mnemonicParsing="false" onAction="#ClickMeChooseFirstPositionBtnListener" prefHeight="40.0" prefWidth="220.0" text="Set rotor's position" textAlignment="RIGHT" />
+                        <Button fx:id="ChooseReflectorNumberBtn" mnemonicParsing="false" onAction="#ClickMeChooseReflectorBtnListener" prefHeight="40.0" prefWidth="220.0" text="Add reflector" />
+                    </items>
+                </ToolBar>
+                <ScrollPane fx:id="scrollPane" fitToHeight="true" fitToWidth="true" prefHeight="160.0" prefWidth="400.0" GridPane.columnSpan="2">
+                    <content>
+                        <FlowPane prefHeight="160.0" prefWidth="400.0" styleClass="backGround" />
+                    </content>
+                </ScrollPane>
+                <Button fx:id="setCodeBtn" alignment="CENTER" cancelButton="true" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickMeSetCodeBtnListener" prefHeight="40.0" prefWidth="189.0" text="Set Code!" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                <Button fx:id="clearBtn" alignment="CENTER" cancelButton="true" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClickMeClearBtnListener" prefHeight="40.0" prefWidth="189.0" text="Clear" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label fx:id="warningLabel" alignment="CENTER_RIGHT" prefHeight="37.0" prefWidth="749.0" text="Code configuration not initialized properly!" textAlignment="CENTER" textFill="#e90c0c" visible="false" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="textInstructions" text="Please drag your selections into the buttons below. If you want to cancel the selection, click the button." textAlignment="CENTER" wrappingWidth="237.83837890625" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="5.0" right="5.0" />
+               </GridPane.margin>
+            </Text>
+            </children>
+        </GridPane>
+    </content>
+</ScrollPane>

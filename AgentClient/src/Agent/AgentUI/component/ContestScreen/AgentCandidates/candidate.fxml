@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="105.0" prefWidth="280.0" styleClass="candidate" stylesheets="@candidate.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Agent.AgentUI.component.ContestScreen.AgentCandidates.StringCandidateController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#aeb5bc" height="105.0" stroke="BLACK" strokeType="INSIDE" width="280.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f8f8f8" height="95.0" stroke="BLACK" strokeType="INSIDE" width="270.0" />
+      <VBox prefHeight="90.0" prefWidth="280.0" styleClass="candidate" stylesheets="@candidate.css">
+         <children>
+            <Label fx:id="StringCandidate" alignment="CENTER" prefHeight="30.0" prefWidth="280.0" textAlignment="CENTER" />
+            <Label fx:id="codeConfiguration" alignment="CENTER" prefHeight="30.0" prefWidth="280.0" />
+            <Label fx:id="allyName" alignment="CENTER" prefHeight="30.0" prefWidth="280.0" stylesheets="@candidate.css" />
+         </children>
+      </VBox>
+   </children>
+</StackPane>

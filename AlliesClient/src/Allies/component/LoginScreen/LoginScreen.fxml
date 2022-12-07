@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="454.0" prefWidth="1400.0" styleClass="root" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Allies.component.LoginScreen.LoginScreenController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="423.0" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="800.0" minWidth="10.0" prefWidth="800.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="767.0" minWidth="10.0" prefWidth="123.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="279.0" minHeight="10.0" prefHeight="230.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="140.0" minHeight="10.0" prefHeight="128.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="69.0" minHeight="10.0" prefHeight="69.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <children>
+            <HBox prefHeight="95.0" prefWidth="800.0">
+               <children>
+                  <Label id="smallLabel" prefHeight="50.0" prefWidth="183.0" text="Allies name:" />
+                  <TextField fx:id="alliesNameTextField" prefHeight="50.0" prefWidth="500.0" />
+               </children>
+            </HBox>
+            <Label id="errorMessage" fx:id="errorMessageLabel" alignment="CENTER" prefHeight="47.0" prefWidth="800.0" />
+         </children>
+      </VBox>
+      <Button fx:id="loginButton" mnemonicParsing="false" onAction="#loginButtonClicked" prefHeight="60.0" prefWidth="164.0" text="Login" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+      <Label id="welcomeTitle" alignment="CENTER" contentDisplay="CENTER" prefHeight="113.0" prefWidth="1013.0" text="Welcome Ally!" GridPane.columnIndex="1" />
+   </children>
+</GridPane>

@@ -1,0 +1,11 @@
+.root{}
+
+.button {
+    -fx-font-size: 18px;
+    -fx-text-fill: white;
+    -fx-font-family: "system-ui";
+    /*-fx-font-style: "Bold Italic";*/
+    -fx-font-weight: bold;
+    -fx-background-color: linear-gradient(#859294, #5a676b);
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+}

@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="EnigmaWebApp:Web">
+    <output-path>$PROJECT_DIR$/out/artifacts/EnigmaWebApp_Web</output-path>
+    <root id="archive" name="EnigmaWebApp_Web.war">
+      <element id="artifact" artifact-name="EnigmaWebApp:Web exploded" />
+    </root>
+  </artifact>
+</component>

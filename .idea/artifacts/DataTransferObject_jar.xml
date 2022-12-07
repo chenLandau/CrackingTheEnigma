@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact name="DataTransferObject:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/DataTransferObject_jar</output-path>
+    <root id="root">
+      <element id="archive" name="DataTransferObject.jar">
+        <element id="module-output" name="DataTransferObject" />
+        <element id="module-output" name="Engine" />
+        <element id="module-output" name="Machine" />
+      </element>
+      <element id="library" level="project" name="Engine" />
+    </root>
+  </artifact>
+</component>

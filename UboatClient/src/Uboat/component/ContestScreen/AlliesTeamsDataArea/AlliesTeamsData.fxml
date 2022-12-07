@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="287.0" prefWidth="607.0" style="-fx-border-color: BLACK;" stylesheets="@TableView.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Uboat.component.ContestScreen.AlliesTeamsDataArea.AlliesTeamsListController">
+   <children>
+      <Label id="smallTitle" alignment="CENTER" layoutY="2.0" prefHeight="55.0" prefWidth="607.0" text="Allies teams details:" textFill="#bfbebe">
+         <font>
+            <Font name="System Bold Italic" size="32.0" />
+         </font>
+      </Label>
+      <TableView fx:id="alliesTeamsListTableView" layoutX="11.0" layoutY="64.0" prefHeight="215.0" prefWidth="586.0">
+         <columns>
+            <TableColumn fx:id="teamName" prefWidth="155.0" styleClass="statisticsLabel" text="Team name" />
+            <TableColumn fx:id="agentsAmount" prefWidth="155.0" styleClass="statisticsLabel" text="Agent's amount" />
+            <TableColumn fx:id="missionSize" prefWidth="160.0" styleClass="statisticsLabel" text="Mission size" />
+         </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+   </children>
+</AnchorPane>

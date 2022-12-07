@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="300.0" prefWidth="522.0" stylesheets="@../../cssPackage/TableView.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Allies.component.DashboardScreen.AgentsDataArea.AgentListController">
+   <children>
+      <TableView fx:id="agentListTableView" layoutX="3.0" layoutY="62.0" prefHeight="230.0" prefWidth="516.0">
+         <columns>
+            <TableColumn fx:id="agentsName" prefWidth="140.0" styleClass="column-header-background" text="Agents name" />
+            <TableColumn fx:id="threadsAmount" prefWidth="192.0" styleClass="column-header-background" text="Threads amount" />
+            <TableColumn fx:id="missionsAmount" prefWidth="160.0" styleClass="column-header-background" text="Missions amount" />
+         </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+         <padding>
+            <Insets bottom="10.0" />
+         </padding>
+      </TableView>
+      <Label id="smallTitle" alignment="CENTER" prefHeight="55.0" prefWidth="522.0" text="Team's Agents details:" textFill="#bfbebe">
+         <font>
+            <Font name="System Bold Italic" size="36.0" />
+         </font></Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact name="Machine:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Machine_jar</output-path>
+    <root id="root">
+      <element id="archive" name="Machine.jar">
+        <element id="module-output" name="Machine" />
+        <element id="module-output" name="Engine" />
+        <element id="module-output" name="DataTransferObject" />
+      </element>
+      <element id="library" level="project" name="Engine" />
+    </root>
+  </artifact>
+</component>

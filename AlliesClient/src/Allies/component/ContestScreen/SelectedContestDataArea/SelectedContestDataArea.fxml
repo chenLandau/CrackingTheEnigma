@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<StackPane prefHeight="299.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Allies.component.ContestScreen.SelectedContestDataArea.SelectedContestDataController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#c1c9d0" height="270.0" stroke="BLACK" strokeType="INSIDE" width="580.0" />
+      <AnchorPane prefHeight="299.0" prefWidth="570.0">
+         <children>
+            <Label id="smallTitle" alignment="CENTER" layoutX="15.0" layoutY="14.0" prefHeight="40.0" prefWidth="570.0" text="Contest data" textFill="#7c7272">
+               <font>
+                  <Font name="System Bold Italic" size="36.0" />
+               </font>
+            </Label>
+            <HBox fx:id="contestDataHBox" layoutX="50.0" layoutY="60.0" prefHeight="223.0" prefWidth="500.0" visible="false">
+               <children>
+                  <VBox prefHeight="213.0" prefWidth="250.0">
+                     <children>
+                        <Label prefHeight="38.0" prefWidth="213.0" styleClass="contestDataLabel" text="Battle field name:">
+                           <font>
+                              <Font name="System Bold Italic" size="18.0" />
+                           </font></Label>
+                        <Label prefHeight="38.0" prefWidth="171.0" styleClass="contestDataLabel" text="Uboat username:">
+                           <font>
+                              <Font name="System Bold Italic" size="18.0" />
+                           </font></Label>
+                        <Label prefHeight="38.0" prefWidth="171.0" styleClass="contestDataLabel" text="Game Status:">
+                           <font>
+                              <Font name="System Bold Italic" size="18.0" />
+                           </font></Label>
+                        <Label prefHeight="38.0" prefWidth="171.0" styleClass="contestDataLabel" text="Game level:">
+                           <font>
+                              <Font name="System Bold Italic" size="18.0" />
+                           </font></Label>
+                        <Label prefHeight="38.0" prefWidth="171.0" styleClass="contestDataLabel" text="Active teams: ">
+                           <font>
+                              <Font name="System Bold Italic" size="18.0" />
+                           </font></Label>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="213.0" prefWidth="250.0">
+                     <children>
+                        <Label fx:id="battleFieldNameLabel" prefHeight="37.0" prefWidth="250.0" styleClass="contestDataLabel">
+                           <font>
+                              <Font name="System Bold Italic" size="18.0" />
+                           </font></Label>
+                        <Label fx:id="uboatUsernameLabel" prefHeight="37.0" prefWidth="250.0" styleClass="contestDataLabel">
+                           <font>
+                              <Font name="System Bold Italic" size="18.0" />
+                           </font></Label>
+                        <Label fx:id="gameStatusLabel" prefHeight="37.0" prefWidth="250.0" styleClass="contestDataLabel">
+                           <font>
+                              <Font name="System Bold Italic" size="18.0" />
+                           </font></Label>
+                        <Label fx:id="gameLevelLabel" prefHeight="37.0" prefWidth="250.0" styleClass="contestDataLabel">
+                           <font>
+                              <Font name="System Bold Italic" size="18.0" />
+                           </font></Label>
+                        <Label fx:id="activeTeamLabel" prefHeight="37.0" prefWidth="250.0" styleClass="contestDataLabel">
+                           <font>
+                              <Font name="System Bold Italic" size="18.0" />
+                           </font></Label>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <Label id="smallLabel" fx:id="noContestLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="15.0" layoutY="48.0" prefHeight="53.0" prefWidth="570.0" text="No Contest selected!">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

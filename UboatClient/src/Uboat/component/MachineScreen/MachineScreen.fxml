@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<GridPane id="smallLabel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1400.0" styleClass="root" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Uboat.component.MachineScreen.MachineScreenController">
+    <columnConstraints>
+        <ColumnConstraints />
+        <ColumnConstraints hgrow="NEVER" maxWidth="87.0" minWidth="0.0" prefWidth="0.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
+      <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
+    </rowConstraints>
+   <children>
+      <VBox prefHeight="700.0" prefWidth="1414.0" spacing="30.0">
+         <children>
+            <Label id="Title" alignment="CENTER" prefHeight="101.0" prefWidth="1408.0" text="Machine Details:" textFill="#818181" />
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <VBox prefHeight="131.0" prefWidth="529.0">
+                     <children>
+                        <Label id="smallLabel" alignment="CENTER_RIGHT" prefHeight="40.0" prefWidth="412.0" text="Amount of rotor in use:  " />
+                        <Label id="smallLabel" alignment="TOP_RIGHT" prefHeight="40.0" prefWidth="381.0" text="Amount of reflectors: ">
+                           <font>
+                              <Font name="Berlin Sans FB Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label id="smallLabel" alignment="CENTER_RIGHT" prefHeight="37.0" prefWidth="474.0" text="DecryptedMessages Amount: " />
+                     </children>
+                  </VBox>
+                  <VBox fx:id="machineDetailsVBox" alignment="CENTER" prefHeight="131.0" prefWidth="942.0" spacing="5.0">
+                     <children>
+                        <Label id="smallLabel" fx:id="rotorsDetailsLabel" prefHeight="50.0" prefWidth="423.0" />
+                        <Label id="smallLabel" fx:id="reflectorDetailsLabel" prefHeight="25.0" prefWidth="476.0" />
+                        <Label id="smallLabel" fx:id="decryptedMessagesAmountLabel" prefHeight="25.0" prefWidth="456.0" />
+                     </children>
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </HBox>
+            <VBox fx:id="codeConfigurationVBox" prefHeight="303.0" prefWidth="1339.0" spacing="14.0">
+               <children>
+                  <VBox prefHeight="219.0" prefWidth="1377.0">
+                     <children>
+                        <Label id="Title" alignment="CENTER" prefHeight="70.0" prefWidth="1402.0" text="Code Calibration" textFill="#818181" />
+                        <StackPane fx:id="codeCalibrationStackPane" prefHeight="136.0" prefWidth="1408.0" />
+                        <Label id="smallLabel" fx:id="codeCalibrationLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="96.0" prefWidth="1408.0" />
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+            <HBox alignment="BOTTOM_CENTER" prefHeight="105.0" prefWidth="1357.0" spacing="20.0">
+               <children>
+                  <Button fx:id="setManualCodeBtn" alignment="CENTER" disable="true" mnemonicParsing="false" onAction="#setManualCodeBtnClicked" prefHeight="70.0" prefWidth="250.0" styleClass="Button" text="Set Manualy Code" textAlignment="CENTER">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="setRandomCodeButton" alignment="CENTER" disable="true" mnemonicParsing="false" onAction="#setRandomCodeButtonClicked" prefHeight="70.0" prefWidth="250.0" text="Set Random Code" textAlignment="CENTER">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets bottom="10.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</GridPane>
